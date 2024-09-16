@@ -1,4 +1,4 @@
-import NotePage from "./_pages/NotePage";
+import NotePage from "../pages/NotePage";
 
 export default function Home() {
   return (

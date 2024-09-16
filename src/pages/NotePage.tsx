@@ -2,7 +2,7 @@
 
 import React, { useRef } from "react";
 import { fakeData as fakeDataTextNotes } from "@/assets/fakeData";
-import TextNote from "../_components/TextNote";
+import TextNote from "../components/TextNote";
 
 // const NOTE_PAGE_HEIGHT = 1000; // pixels
 // const NOTE_PAGE_WIDTH = 800;
