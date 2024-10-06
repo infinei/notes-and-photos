@@ -1,3 +1,5 @@
+import colors from "../assets/colors";
+
 export const setInBounds = (
   card: HTMLDivElement,
   mouseMoveDir = { x: 0, y: 0 },
@@ -16,22 +18,6 @@ export const autoGrow = (textArea: HTMLTextAreaElement) => {
   textArea.style.height = textArea.scrollHeight + "px"; // Set the new height
 };
 
-// export const bringToTop = (card: HTMLDivElement) => {
-//   const otherCards = <HTMLCollectionOf<HTMLDivElement>>(
-//     document.getElementsByClassName("note")
-//   );
-
-//   if (Number(card.style.zIndex) === otherCards.length) return;
-
-//   card.style.zIndex = "1";
-
-//   Array.from(otherCards).forEach((otherCard: HTMLDivElement) => {
-//     if (otherCard !== card) {
-//       otherCard.style.zIndex = "0";
-//     }
-//   });
-// };
-
 export const bringToTop = (card: HTMLDivElement) => {
   const otherCards = <HTMLCollectionOf<HTMLDivElement>>(
     document.getElementsByClassName("note")
@@ -48,4 +34,23 @@ export const bringToTop = (card: HTMLDivElement) => {
       );
     }
   });
+};
+
+export const getColor = (color: string) => {
+  switch (color) {
+    case "color-blue":
+      return colors["color-blue"];
+
+    case "color-yellow":
+      return colors["color-yellow"];
+
+    case "color-purple":
+      return colors["color-purple"];
+
+    case "color-green":
+      return colors["color-green"];
+  }
+
+  // default
+  return colors["color-blue"];
 };

@@ -1,4 +1,5 @@
-import NotePage from "../pages/NotePage";
+import NotePage from "../components/NotePage";
+import TextNoteProvider from "@/context/TextNoteContext";
 
 export default function Home() {
   return (
@@ -11,7 +12,9 @@ export default function Home() {
         backgroundSize: "4em 4em",
       }}
     >
-      <NotePage />
+      <TextNoteProvider>
+        <NotePage />
+      </TextNoteProvider>
     </div>
   );
 }

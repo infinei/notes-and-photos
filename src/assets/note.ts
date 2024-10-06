@@ -1,7 +1,8 @@
-type Note = {
+type TextNoteType = {
+  _id: string;
   body: string;
   color: string;
-  position: string;
+  position: { x: number; y: number };
 };
 
-export default Note;
+export default TextNoteType;

@@ -1,4 +1,4 @@
-const TrashIcon = ({ size = "24" }) => {
+const TrashIcon = ({ size = "24", color = "currentColor" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -7,7 +7,7 @@ const TrashIcon = ({ size = "24" }) => {
       height={size}
       width={size}
       strokeWidth={1.5}
-      stroke="currentColor"
+      stroke={color}
       className="size-6"
     >
       <path
