@@ -17,7 +17,11 @@ export async function PUT() {}
 // non-idempotent create note
 export async function POST(request: NextRequest) {
   const newData = await request.json();
-  const newNote = await createTextNote(newData.body, newData.color, newData.position);
+  const newNote = await createTextNote(
+    newData.body,
+    newData.color,
+    newData.position,
+  );
 
   return Response.json({ status: 200, newNote: newNote });
 }
